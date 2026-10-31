@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Happy Birthday Khushi ❤️</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Great+Vibes&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="stars"></div>
+  <div class="hearts-bg"></div>
+
+  <header class="topbar">
+    <div class="logo">With Love <span>♥</span></div>
+
+    <label class="music-btn">
+      🎵 Add Music
+      <input type="file" id="musicInput" accept="audio/*" hidden>
+    </label>
+
+    <button id="musicToggle" class="music-toggle">▶</button>
+  </header>
+
+  <audio id="birthdayMusic" loop></audio>
+
+  <div class="pill">✨ A SPECIAL SURPRISE FOR YOU ✨</div>
+
+  <main>
+
+    <!-- SCREEN 1 -->
+
+    <section class="screen active" id="screen1">
+
+      <div class="small-heart">♡</div>
+
+      <p class="eyebrow">I made something special...</p>
+
+      <h1>Hey, <span class="name">Khushi</span> ❤️</h1>
+
+      <p class="sub">
+        Someone special deserves something magical.
+        Are you ready for your surprise?
+      </p>
+
+      <button class="heart-button" id="heartButton">
+        ♥
+      </button>
+
+      <p class="hint">TAP THE HEART TO BEGIN</p>
+
+    </section>
+
+
+    <!-- SCREEN 2 -->
+
+    <section class="screen" id="screen2">
+
+      <p class="eyebrow">Today is all about you</p>
+
+      <h1>Happy Birthday<br>
+        <span class="name">Khushi!</span>
+      </h1>
+
+      <p class="sub">
+        Three little balloons, three little wishes.
+        Pop them all! 🎈
+      </p>
+
+      <div class="balloons">
+
+        <button class="balloon pink">♥</button>
+        <button class="balloon blue">♥</button>
+        <button class="balloon gold">♥</button>
+
+      </div>
+
+      <p class="hint">POP ALL THE BALLOONS</p>
+
+      <button class="next hidden" id="toGallery">
+        See Your Memories →
+      </button>
+
+    </section>
+
+
+    <!-- SCREEN 3 : PHOTO GALLERY -->
+
+    <section class="screen" id="screen3">
+
+      <p class="eyebrow">Beautiful memories</p>
+
+      <h1>Your Little <span class="name">World</span> 📸</h1>
+
+      <p class="sub">
+        Every picture tells a beautiful story.
+      </p>
+
+      <label class="upload-btn">
+        ＋ Add Your Photos
+        <input
+          type="file"
+          id="photoInput"
+          accept="image/*"
+          multiple
+          hidden
+        >
+      </label>
+
+      <div class="gallery">
+    <img src="image/khushi1.jpg" alt="Khushi 1">
+    <img src="image/khushi2.jpg" alt="Khushi 2">
+    <img src="image/khushi4.jpg" alt="Khushi 4">
+</div>
+
+      <p class="hint">ADD PHOTOS TO YOUR GALLERY</p>
+
+      <button class="next" id="toLetter">
+        Read Your Letter 💌
+      </button>
+
+    </section>
+
+
+    <!-- SCREEN 4 : LOVE LETTER -->
+
+    <section class="screen" id="screen4">
+
+      <p class="eyebrow">One last little thing...</p>
+
+      <h1>A Letter <span class="name">For You</span> 💌</h1>
+
+      <p class="sub">
+        Some feelings are better expressed through words.
+      </p>
+
+      <button class="envelope" id="envelope">
+        💌
+      </button>
+
+      <p class="hint">TAP TO OPEN YOUR LETTER</p>
+
+      <article class="letter hidden" id="letter">
+
+        <p class="letter-title">
+          Dear <span class="name">Khushi</span>,
+        </p>
+
+        <p>
+          Happy Birthday to the most special person!
+          I hope your day is filled with happiness,
+          laughter and beautiful memories.
+        </p>
+
+        <p>
+          Thank you for being you. Keep smiling,
+          keep shining, and never stop chasing your dreams.
+          You deserve all the wonderful things in this world.
+        </p>
+
+        <p>
+          May every new day bring you more reasons
+          to smile. Always stay happy and keep spreading
+          your beautiful light.
+        </p>
+
+        <p class="sign">
+          With lots of love, ❤️<br>
+          <strong>Your person</strong>
+        </p>
+
+        <button class="next" id="finalButton">
+          One More Surprise ✨
+        </button>
+
+      </article>
+
+    </section>
+
+
+    <!-- SCREEN 5 : FINAL CELEBRATION -->
+
+    <section class="screen" id="screen5">
+
+      <div class="confetti" id="confetti"></div>
+
+      <p class="eyebrow">Made with love, just for you</p>
+
+      <h1 class="final-title">
+        HAPPY<br>
+        BIRTHDAY<br>
+        <span class="name">Khushi!</span>
+      </h1>
+
+      <div class="cake">🎂</div>
+
+      <p class="sub">
+        Make a wish. May all your dreams come true! 💖
+      </p>
+
+      <div class="final-message">
+        You are special. Never forget that! ❤️
+      </div>
+
+      <button class="next" id="restart">
+        Replay Surprise ↻
+      </button>
+
+    </section>
+
+  </main>
+
+  <footer>
+    Made with ❤️ especially for Khushi
+  </footer>
+
+  <script src="script.js"></script>
+  <button id="startSurprise">
+    ❤️ Start Surprise ❤️
+</button>
+
+<audio id="birthdayMusic" loop>
+    <source src="./music/birthday.mp3" type="audio/mpeg">
+</audio>
+
+<button id="startSurprise">
+    ❤️ Start Surprise ❤️
+</button>
+<section class="love-letter">
+    <h2>A Special Letter For You ❤️</h2>
+
+    <div class="envelope" id="envelope">
+        <div class="envelope-icon">💌</div>
+        <p>For Khushi ❤️</p>
+        <button onclick="openLetter()">Open Your Letter</button>
+    </div>
+
+    <div class="letter-content" id="letterContent">
+        <h2>Dear Khushi ❤️</h2>
+
+        <p>
+            You are a very special person.
+            Your smile makes every moment beautiful.
+            I hope your birthday is filled with happiness,
+            love and unforgettable memories.
+        </p>
+
+        <h3>Happy Birthday Khushi! 🎂❤️</h3>
+        <p>With lots of love ❤️</p>
+
+        <button onclick="closeLetter()">Close Letter</button>
+    </div>
+</section>
+<!-- 3D Birthday Cake -->
+<section class="cake-section" id="birthdayCake">
+
+    <h2>Make a Wish, Khushi! ❤️</h2>
+    <p>Close your eyes and make a birthday wish ✨</p>
+
+    <div class="cake-scene">
+
+        <div class="cake">
+            <div class="candle">
+                <div class="flame"></div>
+            </div>
+
+            <div class="cake-top"></div>
+            <div class="cake-middle"></div>
+            <div class="cake-bottom"></div>
+
+            <div class="cake-plate"></div>
+        </div>
+
+    </div>
+
+    <h3 id="cakeMessage">Happy Birthday Khushi! 🎂</h3>
+
+    <button id="blowCandlesBtn" onclick="blowCandles()">
+        💨 Blow the Candles
+    </button>
+
+    <div id="confettiContainer"></div>
+
+</section>
+<!-- Mystery Gift Box -->
+<section class="gift-section">
+
+    <h2>A Special Gift For You 🎁</h2>
+    <p>Khushi, someone has a surprise for you! ❤️</p>
+
+    <div class="gift-box" id="giftBox" onclick="openGift()">
+        <div class="gift-lid"></div>
+        <div class="gift-body">
+            <div class="gift-ribbon"></div>
+        </div>
+        <div class="gift-bow">🎀</div>
+    </div>
+
+    <p id="giftHint">Tap the gift box to open it! ✨</p>
+
+    <div class="gift-surprise" id="giftSurprise">
+        <h2>Surprise Khushi! ❤️</h2>
+        <p>
+            You are one of the most special people.
+            May your life always be filled with happiness,
+            beautiful memories and endless smiles.
+        </p>
+        <h3>Happy Birthday! 🎂💖</h3>
+    </div>
+
+</section>
+</body>
+</html>
